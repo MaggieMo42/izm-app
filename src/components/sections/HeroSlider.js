@@ -1,10 +1,9 @@
-import React from 'react';
 import Slider from 'react-slick';
 
 const HeroSlider = () => {
   const settings = {
-    dots: true,
-    infinite: true,
+    dots: false,
+    infinite: false,
     autoplay: true,
     speed: 500,
     slidesToShow: 1,
@@ -13,11 +12,12 @@ const HeroSlider = () => {
 
   return (
     <div className="hero-container">
-      <Slider {...settings} className="hero-slider">
-        <div className="slide"><img src="/img/zdjele.webp" alt="zdjele za zvučnu masažu" /></div>
-        <div className="slide"><img src="/img/Nina2.jpg" alt="slika 2" /></div>
-        <div className="slide"><img src="/img/Nina3.jpg" alt="slika 3" /></div>
-      </Slider>
+<Slider {...settings} className="hero-slider">
+  <div className="slide"><img src="/img/zdjele.webp" alt="zdjele za zvučnu masažu" /></div>
+  <div className="slide"><img src="/img/nina2.jpg" alt="slika 2" /></div>
+  <div className="slide"><img src="/img/nina3.jpg" alt="slika 3" /></div>
+</Slider>
+
       <div className="hero-text">
         <h1 className="creamtext">Zen Place Pula</h1>
         <p>Dobro došli u vašu oazu mira</p>

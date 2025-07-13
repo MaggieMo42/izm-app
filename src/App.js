@@ -1,6 +1,7 @@
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
+import "slick-carousel/slick/slick.css"; 
 import Header from "./components/sections/Header";
 import Footer from "./components/sections/Footer";
 import Home from "./components/pages/Home";
