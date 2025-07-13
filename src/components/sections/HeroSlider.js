@@ -3,7 +3,8 @@ import Slider from 'react-slick';
 const HeroSlider = () => {
   const settings = {
     dots: false,
-    infinite: false,
+    infinite: true,
+    arrows: false,
     autoplay: true,
     speed: 500,
     slidesToShow: 1,
