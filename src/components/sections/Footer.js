@@ -4,7 +4,7 @@ const Footer = () => {
       <div className="container">
         <div className="row">
           {/* Column 1 */}
-          <div className="col-md-6 col-lg-6 col-xl-6 mb-4">
+          <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
             <h6 className="text-uppercase fw-bold">Usluge</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto" />
             <p><a href="zvucna_masaza.html" className="text-dark">Zvučna masaža</a></p>
@@ -14,7 +14,7 @@ const Footer = () => {
           </div>
 
           {/* Column 2 */}
-          <div className="col-md-6 col-lg-6 col-xl-6 mb-4">
+          <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
             <h6 className="text-uppercase fw-bold">Contact</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto" />
             <p><i className="fas fa-home me-2"></i> Ulica Drage Gervaisa 22, Pula</p>
@@ -38,8 +38,12 @@ const Footer = () => {
                 <i className="fab fa-instagram"></i>
               </a>
             </p>
-          </div>
+          </div> 
+          {/* Column 3 */}
+          <div className="col-md-4 col-lg-4 col-xl-4 mb-4 newsletter">
+  <div className="ml-embedded" data-form="hkz3Np"></div>
         </div>
+      </div>
       </div>
     </footer>
   );
