@@ -117,24 +117,15 @@ a {
        text-decoration: none;
    }
    
-::placeholder {
-	font-size: 16px;
-	padding: 5px;
+
+.ml-embedded {
+  all: initial;
+  display: block;
+  max-width: 100%;
 }
-.button-newsletter {
-	border-radius: 25px;
-	border: none;
-	padding: 5px 10px;
-	margin: 10px 0px;
-	text-align: center;
-	background-color: #0E5C63;
-}
+
 .newsletter {
-	color: #fffaf6;
-	
+  padding: 1rem;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
 }
-
-#email-newsletter {
-	background-color: #fffaf6;	
-}
-
