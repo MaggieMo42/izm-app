@@ -36,13 +36,13 @@ const HumanDesign = () => {
                         <h1>{data.title.rendered}</h1>
                     </div>
                     <div className="col-md-9 m-auto">
-                        <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} />
+                        <img className="img-fluid w-100 mb-5 feature-media" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} />
                     </div>
                     <div className="col-md-8 m-auto">
                         <div
   dangerouslySetInnerHTML={{
     __html: sanitizeHtml(data.content.rendered, {
-      allowedTags: ["p", "strong", "em", "ul", "ol", "li", "img", "h1", "h2", "h3", "br"],
+      allowedTags: ["p", "strong", "em", "ul", "ol", "li", "h1", "h2", "h3", "br"],
       allowedAttributes: {
         img: ["src", "alt", "width", "height", "style"],
         "*": ["style"]
