@@ -2,12 +2,25 @@ import { Link } from 'react-router-dom';
 import { useEffect } from 'react';
 const Footer = () => {
   useEffect(() => {
-    // Initialize MailerLite form
-    window.ml_webforms2 = window.ml_webforms2 || [];
-    window.ml_webforms2.push({
-      "for_id": "hkz3Np",
-      "div_id": "mlb2-embed"
-    });
+    // Load MailerLite script
+    const script = document.createElement('script');
+    script.src = 'https://static.mailerlite.com/js/w/webforms.min.js?v1f25a0';
+    script.async = true;
+    document.body.appendChild(script);
+
+    // Initialize after script loads
+    script.onload = () => {
+      window.ml_webforms2 = window.ml_webforms2 || [];
+      window.ml_webforms2.push({
+        "for_id": "hkz3Np",
+        "div_id": "mlb2-embed",
+        "auto_reload": true
+      });
+    };
+
+    return () => {
+      document.body.removeChild(script);
+    };
   }, []);
   return (
     <footer className="bg-light text-dark pt-4">
@@ -49,10 +62,13 @@ const Footer = () => {
               </a>
             </p>
           </div> 
-          
-          <div className="col-md-4 col-lg-4 col-xl-4 mb-4 newsletter">
-  <div class="ml-embedded" data-form="hkz3Np"></div>
-        </div>
+        
+          <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
+<div className="newsletter">
+  <div className="ml-embedded" data-form="hkz3Np"></div>
+</div>
+</div>
+      
       </div>
       </div>
     </footer>
