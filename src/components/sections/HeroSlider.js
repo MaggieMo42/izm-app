@@ -21,7 +21,7 @@ const HeroSlider = () => {
 
       <div className="hero-text">
         <h1 className="creamtext">Zen Place Pula</h1>
-        <p>Dobro došli u vašu oazu mira</p>
+        <p>Dobrodošli u vašu oazu mira</p>
       </div>
     </div>
   );

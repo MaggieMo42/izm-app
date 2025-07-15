@@ -1,10 +1,19 @@
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 const Footer = () => {
+  useEffect(() => {
+    // Initialize MailerLite form
+    window.ml_webforms2 = window.ml_webforms2 || [];
+    window.ml_webforms2.push({
+      "for_id": "hkz3Np",
+      "div_id": "mlb2-embed"
+    });
+  }, []);
   return (
     <footer className="bg-light text-dark pt-4">
       <div className="container">
         <div className="row">
-          {/* Column 1 */}
+        
           <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
             <h6 className="text-uppercase fw-bold">Usluge</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto" />
@@ -14,12 +23,12 @@ const Footer = () => {
 <p><Link to="/HumanDesign" className="text-dark">Human Design</Link></p>
           </div>
 
-          {/* Column 2 */}
+          
           <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
             <h6 className="text-uppercase fw-bold">Kontakt</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto" />
             <p><i className="fas fa-home me-2"></i> Ulica Drage Gervaisa 22, Pula</p>
-            <p><a href="mailto:info@zenplacepula.com" className="creamtext">info@zenplacepula.com</a></p>
+            <p><a href="mailto:info@zenplacepula.com" className="link">info@zenplacepula.com</a></p>
             <p><i className="fas fa-phone me-2"></i> +01 234 567 88</p>
             <p>
               <a
@@ -40,9 +49,9 @@ const Footer = () => {
               </a>
             </p>
           </div> 
-          {/* Column 3 */}
+          
           <div className="col-md-4 col-lg-4 col-xl-4 mb-4 newsletter">
-  <div className="ml-embedded" data-form="hkz3Np"></div>
+  <div class="ml-embedded" data-form="hkz3Np"></div>
         </div>
       </div>
       </div>
