@@ -1,7 +1,9 @@
 import React, { useState, useEffect } from "react";
 import sanitizeHtml from "sanitize-html";
 
-const About = () => {
+
+
+const ThetaHealing = () => {
 
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
@@ -9,7 +11,7 @@ const About = () => {
     useEffect(() => {
         const fetchPage = async () => {
             try {
-                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/143');
+                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/1321');
                 if (!response.ok) {
                 throw new Error(`Došlo je do greške: ${response.status}`);
                 }
@@ -38,20 +40,20 @@ const About = () => {
                         <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} />
                     </div>
                     <div className="col-md-8 m-auto">
-                      <div
-                        dangerouslySetInnerHTML={{
-                          __html: sanitizeHtml(data.content.rendered, {
-                            allowedTags: ["p", "strong", "em", "ul", "ol", "li", "img", "h1", "h2", "h3", "br"],
-                            allowedAttributes: {
-                              img: ["src", "alt", "width", "height", "style"],
-                              "*": ["style"]
-                            }
-                          })
-                        }}
-                      />
+                     <div
+                       dangerouslySetInnerHTML={{
+                         __html: sanitizeHtml(data.content.rendered, {
+                           allowedTags: ["p", "strong", "em", "ul", "ol", "li", "img", "h1", "h2", "h3", "br"],
+                           allowedAttributes: {
+                             img: ["src", "alt", "width", "height", "style"],
+                             "*": ["style"]
+                           }
+                         })
+                       }}
+                     />
                     </div>
                 </div>
             </div>
         );
 };
-export default About;
+export default ThetaHealing;

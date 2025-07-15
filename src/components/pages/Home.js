@@ -1,7 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import HeroSlider from "../sections/HeroSlider"; 
-import Footer from "../sections/Footer";
+
 const Home = () => {
   const [data, setData] = useState(null);
   const [error, setError] = useState(null);

@@ -10,6 +10,11 @@ import Services from "./components/pages/Services";
 import About from "./components/pages/About";
 import Blog from './components/pages/Blog';
 import BlogSingle from './components/pages/BlogSingle';
+import HumanDesign from "./components/pages/HumanDesign";
+import KundaliniYoga from "./components/pages/KundaliniYoga";
+import ThetaHealing from "./components/pages/ThetaHealing";
+import ZvucnaMasaza from "./components/pages/ZvucnaMasaza";
+import Cjenik from "./components/pages/Cjenik";
 import { Routes, Route, BrowserRouter as Router } from 'react-router-dom';
 
 function App() {
@@ -25,7 +30,11 @@ function App() {
 <Route path="/contact" element={<Contact />} />
 <Route path="/blog" element={<Blog />} />
 <Route path="/blog/:id" element={<BlogSingle />} />
-
+<Route path="/HumanDesign" element={<HumanDesign />} />
+<Route path="/KundaliniYoga" element={<KundaliniYoga />} />
+<Route path="/ThetaHealing" element={<ThetaHealing />} />
+<Route path="/ZvucnaMasaza" element={<ZvucnaMasaza />} />
+<Route path="/Cjenik" element={<Cjenik />} />
 </Routes>
  
   <Footer />
