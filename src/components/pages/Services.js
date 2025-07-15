@@ -9,7 +9,7 @@ const Services = () => {
     useEffect(() => {
         const fetchPage = async () => {
             try {
-                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages?parent=155');
+                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages?parent=155?_embed');
                 if (!response.ok) {
                     throw new Error(`Došlo je do greške: ${response.status}`);
                 }

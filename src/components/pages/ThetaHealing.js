@@ -11,7 +11,7 @@ const ThetaHealing = () => {
     useEffect(() => {
         const fetchPage = async () => {
             try {
-                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/1321');
+                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/1321?_embed');
                 if (!response.ok) {
                 throw new Error(`Došlo je do greške: ${response.status}`);
                 }
@@ -43,7 +43,7 @@ const ThetaHealing = () => {
                      <div
                        dangerouslySetInnerHTML={{
                          __html: sanitizeHtml(data.content.rendered, {
-                           allowedTags: ["p", "strong", "em", "ul", "ol", "li", "img", "h1", "h2", "h3", "br"],
+                           allowedTags: ["p", "strong", "em", "ul", "ol", "li",  "h1", "h2", "h3", "br"],
                            allowedAttributes: {
                              img: ["src", "alt", "width", "height", "style"],
                              "*": ["style"]
