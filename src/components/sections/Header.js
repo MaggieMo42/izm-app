@@ -28,9 +28,6 @@ const Header = () => {
                             <Nav.Link as={Link} to="/Contact" className="creamtext">
                                 Kontakt
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/Blog" className="creamtext">
-                                Novosti
-                            </Nav.Link>
                             <NavDropdown title="Usluge" id="services-dropdown" className="creamtext">
                                 <NavDropdown.Item as={Link} to="/ZvucnaMasaza">Zvučna masaža</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/KundaliniYoga">Kundalini Yoga</NavDropdown.Item>

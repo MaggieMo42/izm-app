@@ -31,14 +31,14 @@ const HumanDesign = () => {
         return(
             <div className="container py-5 clanak-single">
                 <div className="row">
-                    <div className="col-md-8 m-auto mb-4 clanak-zaglavlje">
+                    <div className="col-md-10 m-auto mb-4 clanak-zaglavlje">
                         <p>{data?._embedded?.["wp:term"]?.[0]?.[0].name}</p>
                         <h1>{data.title.rendered}</h1>
                     </div>
-                    <div className="col-md-9 m-auto">
+                    <div className="col-md-8 m-auto">
                         <img className="img-fluid w-100 mb-5 feature-media" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} />
                     </div>
-                    <div className="col-md-8 m-auto">
+                    <div className="col-md-10 m-auto">
                         <div
   dangerouslySetInnerHTML={{
     __html: sanitizeHtml(data.content.rendered, {

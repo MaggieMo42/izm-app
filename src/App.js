@@ -8,8 +8,6 @@ import Home from "./components/pages/Home";
 import Contact from "./components/pages/Contact";
 import Services from "./components/pages/Services";
 import About from "./components/pages/About";
-import Blog from './components/pages/Blog';
-import BlogSingle from './components/pages/BlogSingle';
 import HumanDesign from "./components/pages/HumanDesign";
 import KundaliniYoga from "./components/pages/KundaliniYoga";
 import ThetaHealing from "./components/pages/ThetaHealing";
@@ -28,8 +26,6 @@ function App() {
 <Route path="/services" element={<Services />} />
 <Route path="/about" element={<About />} />
 <Route path="/contact" element={<Contact />} />
-<Route path="/blog" element={<Blog />} />
-<Route path="/blog/:id" element={<BlogSingle />} />
 <Route path="/HumanDesign" element={<HumanDesign />} />
 <Route path="/KundaliniYoga" element={<KundaliniYoga />} />
 <Route path="/ThetaHealing" element={<ThetaHealing />} />

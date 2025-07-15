@@ -25,7 +25,9 @@ body {
 .greentext {
 	color: #84D99C;
 }
-
+.nav-link {
+  color: #fffaf6;
+}
 .hero-container {
   position: relative;
   overflow: hidden;
@@ -136,4 +138,9 @@ width: 100%;
   max-width: 100%;
   height: auto;
   display: block;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 2rem;
 }
