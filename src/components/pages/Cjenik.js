@@ -1,8 +1,5 @@
 import React, { useState, useEffect } from "react";
-
-
-
-
+import sanitizeHtml from "sanitize-html";
 
 const Cjenik = () => {
 
@@ -37,13 +34,26 @@ const Cjenik = () => {
                         <p>{data?._embedded?.["wp:term"]?.[0]?.[0].name}</p>
                         <h1>{data.title.rendered}</h1>
                     </div>
-                    <div className="col-md-9 m-auto">
-                        <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} 
-                        alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"}/>
-                    </div>
-                    <div className="col-md-8 m-auto">
-                        <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />
-                    </div>
+
+                   <div className="col-md-8 m-auto clanak-sadrzaj">
+                    <div
+                        dangerouslySetInnerHTML={{
+                            __html: sanitizeHtml(data.content.rendered, {
+                                allowedTags: [
+                                    "p", "strong", "em", "ul", "ol", "li", "h1", "h2", "h3", "br",
+                                    "table", "thead", "tbody", "tr", "th", "td", "caption"
+                                ],
+                                allowedAttributes: {
+                                    img: ["src", "alt", "width", "height", "style"],
+                                    table: ["border", "cellpadding", "cellspacing", "width", "style"],
+                                    td: ["colspan", "rowspan", "style"],
+                                    th: ["colspan", "rowspan", "style"],
+                                    "*": ["style"]
+                                }
+                            })
+                        }}
+                    />
+                </div>
                 </div>
             </div>
         );

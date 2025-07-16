@@ -38,7 +38,7 @@ const HumanDesign = () => {
                         <img className="img-fluid w-100 mb-5 feature-media" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url}
                         alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"} />
                     </div>
-                    <div className="col-md-10 m-auto">
+                    <div className="col-md-10 m-auto clanak-sadrzaj">
                         <div
   dangerouslySetInnerHTML={{
     __html: sanitizeHtml(data.content.rendered, {

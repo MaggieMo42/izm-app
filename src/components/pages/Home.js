@@ -1,6 +1,7 @@
 
 import React, { useState, useEffect } from "react";
 import HeroSlider from "../sections/HeroSlider"; 
+import sanitizeHtml from "sanitize-html";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -10,7 +11,7 @@ const Home = () => {
     const fetchPage = async () => {
       try {
         const response = await fetch(
-          "https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/648"
+          "https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/1389?_embed"
         );
         if (!response.ok) {
           throw new Error(`Došlo je do greške: ${response.status}`);
@@ -29,11 +30,20 @@ const Home = () => {
   if (!data) return <p>Učitavanje...</p>;
 
   return (
-    <div>
-          {/* ✅ Add the slider at the top, or wherever you want it */}
+    <><div>
       <HeroSlider />
-  
-    </div>
+    </div><div className="col-md-8 m-auto">
+        <div
+          dangerouslySetInnerHTML={{
+            __html: sanitizeHtml(data.content.rendered, {
+              allowedTags: ["p", "strong", "em", "ul", "ol", "li", "img", "h1", "h2", "h3", "br"],
+              allowedAttributes: {
+                          img: ["src", "alt", "width", "height", "style"],
+                            "*": ["style"]
+              }
+            })
+          }} />
+      </div></>
   );
 };
 

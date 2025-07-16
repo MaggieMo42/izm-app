@@ -37,18 +37,19 @@ const About = () => {
                     <div className="col-md-9 m-auto">
                         <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"}/>
                     </div>
-                    <div className="col-md-8 m-auto">
-                      <div
-                        dangerouslySetInnerHTML={{
+                     <div className="col-md-10 m-auto mb-5 clanak-sadrzaj">
+                        <div
+                          dangerouslySetInnerHTML={{
                           __html: sanitizeHtml(data.content.rendered, {
-                            allowedTags: ["p", "strong", "em", "ul", "ol", "li", "h1", "h2", "h3", "br"],
-                            allowedAttributes: {
-                              "*": ["style"]
-                            }
-                          })
-                        }}
-                      />
-                    </div>
+                          allowedTags: ["p", "strong", "em", "ul", "ol", "li", "h1", "h2", "h3", "br"],
+                          allowedAttributes: {
+                          img: ["src", "alt", "width", "height", "style"],
+                            "*": ["style"]
+                                                  }
+                                                })
+                                              }}
+                                            />
+                                        </div>
                 </div>
             </div>
         );
