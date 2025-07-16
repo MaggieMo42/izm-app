@@ -51,10 +51,11 @@ const ThetaHealing = () => {
                          })
                        }}
                      />
+                     </div>
                     </div>
-                    <div><p>Cijene Theta Healing tretmana pogledajte <a Link to>ovdje</a>.</p></div>
-                </div>
-            </div>
+                    </div>
+              
         );
-};
+}
+
 export default ThetaHealing;

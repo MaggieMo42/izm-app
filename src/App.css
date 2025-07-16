@@ -35,6 +35,7 @@ body {
 
 
 .hero-slider img {
+  margin-top: 10px;
   width: 100%;
   height: auto;
   display: block
