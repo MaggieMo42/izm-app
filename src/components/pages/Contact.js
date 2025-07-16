@@ -4,11 +4,11 @@ const Contact = () => {
   return (
     <div className="contact-section">
       <div className="contact-info">
-        <p>Kako do nas?</p>
+        <p> </p>
       </div>    
 <div className="container">
   <div className="row">
-    {/* First column for iframe */}
+  
     <div className="col-md-6">
       <iframe
         style={{ width: '100%', height: '450px', border: 0 }}
@@ -20,7 +20,6 @@ const Contact = () => {
       ></iframe>
     </div>
     
-    {/* Second column for image */}
     <div className="col-md-6">
       <img 
         src={Lokacija} 

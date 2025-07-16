@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import HeroSlider from "../sections/HeroSlider"; 
 import sanitizeHtml from "sanitize-html";
+import BlogList from "./BlogList";
 
 const Home = () => {
   const [data, setData] = useState(null);
@@ -30,20 +31,27 @@ const Home = () => {
   if (!data) return <p>Učitavanje...</p>;
 
   return (
-    <><div>
+  <>
+    <div>
       <HeroSlider />
-    </div><div className="col-md-8 m-auto">
-        <div
-          dangerouslySetInnerHTML={{
-            __html: sanitizeHtml(data.content.rendered, {
-              allowedTags: ["p", "strong", "em", "ul", "ol", "li", "img", "h1", "h2", "h3", "br"],
-              allowedAttributes: {
-                          img: ["src", "alt", "width", "height", "style"],
-                            "*": ["style"]
-              }
-            })
-          }} />
-      </div></>
+    </div>
+    <div className="col-md-8 m-auto">
+      <div
+        dangerouslySetInnerHTML={{
+          __html: sanitizeHtml(data.content.rendered, {
+            allowedTags: ["p", "strong", "em", "ul", "ol", "li", "img", "h1", "h2", "h3", "br"],
+            allowedAttributes: {
+              img: ["src", "alt", "width", "height", "style"],
+              "*": ["style"]
+            }
+          })
+        }}
+      />
+    </div>
+    <div className="py-5">
+        <BlogList />
+      </div>
+  </>
   );
 };
 
