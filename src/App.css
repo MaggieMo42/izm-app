@@ -16,23 +16,19 @@ body {
 	
 .dropdown-menu {
 	background: #84D99C;
-
 }
 
 .creamtext {
 	color:#fffaf6
 }
-.greentext {
-	color: #84D99C;
-}
 .nav-link {
   color: #fffaf6;
 }
+
 .hero-container {
   position: relative;
   overflow: hidden;
 }
-
 
 .hero-slider img {
   margin-top: 10px;
@@ -50,7 +46,6 @@ body {
   border: solid 10px rgba(132, 217, 156, 0.5);
 }
 
-
 .hero-text {
   position: absolute;
   top: 50%;
@@ -67,7 +62,6 @@ body {
   max-width: 95%; 
   backdrop-filter: blur(4px); 
 }
-
 
 .hero-text h1 {
   font-size: 2.5rem;
@@ -147,6 +141,7 @@ footer {
 
 	background: #84D99C;
 	background: linear-gradient(0deg, rgba(132, 217, 156, 1) 50%, rgba(14, 92, 99, 1) 100%);
+  padding-top: 10px;
 	
 }
 
