@@ -3,7 +3,7 @@
 
 body {
 	font-family: "PT Serif", Sans-serif;
-	background: linear-gradient(0deg, rgba(132, 217, 156, 1) 50%, rgba(14, 92, 99, 1) 100%);
+	background-color: #fffaf6;
 	font-size: 20px;
 }
 
@@ -178,7 +178,7 @@ h1 {
   margin-bottom: 2rem;
   font-family: "Corinthia", cursive;
 font-weight: 700;
-color: #fffaf6;
+color: #84D99C;
 }
 
 
