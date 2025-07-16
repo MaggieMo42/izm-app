@@ -1,9 +1,6 @@
 import React, { useState, useEffect } from "react";
 import sanitizeHtml from "sanitize-html";
 
-
-
-
 const KundaliniYoga= () => {
 
     const [data, setData] = useState(null);
@@ -38,7 +35,7 @@ const KundaliniYoga= () => {
                         <h1>{data.title.rendered}</h1>
                     </div>
                     <div className="col-md-9 m-auto">
-                        <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} />
+                        <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url}alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"} />
                     </div>
                     <div className="col-md-8 m-auto">
                         <div

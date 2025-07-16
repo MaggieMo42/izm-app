@@ -21,7 +21,7 @@ const Footer = () => {
             <h6 className="text-uppercase fw-bold">Kontakt</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto" />
             <p><i className="fas fa-home me-2"></i> Ulica Drage Gervaisa 22, Pula</p>
-            <p><a href="mailto:info@zenplacepula.com" className="link creamtext">info@zenplacepula.com</a></p>
+            <p><a href="mailto:info@zenplacepula.com">info@zenplacepula.com</a></p>
             <p><i className="fas fa-phone me-2"></i> +01 234 567 88</p>
             <p>
               <a

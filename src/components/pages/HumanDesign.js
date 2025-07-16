@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
 import sanitizeHtml from "sanitize-html";
-import { Link, useParams } from "react-router-dom";
 
 const HumanDesign = () => {
         const [data, setData] = useState(null);
         const [error, setError] = useState(null);
-        const {id} = useParams();
+
     
         useEffect(() => {
             const fetchPage = async () => {
@@ -36,7 +35,8 @@ const HumanDesign = () => {
                         <h1>{data.title.rendered}</h1>
                     </div>
                     <div className="col-md-8 m-auto">
-                        <img className="img-fluid w-100 mb-5 feature-media" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} />
+                        <img className="img-fluid w-100 mb-5 feature-media" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url}
+                        alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"} />
                     </div>
                     <div className="col-md-10 m-auto">
                         <div

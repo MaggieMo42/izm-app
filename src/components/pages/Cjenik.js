@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Footer from "../sections/Footer";
+
 
 
 
@@ -12,7 +12,7 @@ const Cjenik = () => {
     useEffect(() => {
         const fetchPage = async () => {
             try {
-                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/143');
+                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/1376?_embed');
                 if (!response.ok) {
                 throw new Error(`Došlo je do greške: ${response.status}`);
                 }
@@ -38,7 +38,8 @@ const Cjenik = () => {
                         <h1>{data.title.rendered}</h1>
                     </div>
                     <div className="col-md-9 m-auto">
-                        <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} />
+                        <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url} 
+                        alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"}/>
                     </div>
                     <div className="col-md-8 m-auto">
                         <div dangerouslySetInnerHTML={{ __html: data.content.rendered }} />

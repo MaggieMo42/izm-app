@@ -15,7 +15,7 @@ const NewsletterForm = () => {
         />
       </div>
       <button type="submit" className="btn btn-success custom-btn w-100">
-        Pretplati se
+        Pretplatite se
       </button>
     </form>
   );
