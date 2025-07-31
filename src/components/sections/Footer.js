@@ -1,8 +1,10 @@
 import { Link } from 'react-router-dom';
+import MailerLiteForm from '../parts/MailerLiteForm';
 const Footer = () => {
 
+
   return (
-    <footer className="bg-light text-dark pt-4">
+    <footer className="bg-light pt-4">
       <div className="container">
         <div className="row">
           <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
@@ -39,8 +41,7 @@ const Footer = () => {
             </p>
           </div> 
         <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
-          <div class="ml-embedded" data-form="xfGhA4">test</div>
-    
+          <MailerLiteForm />
           </div> 
       </div>
       </div>
