@@ -24,8 +24,7 @@ const Contact = () => {
       <img 
         src={Lokacija} 
         alt="Lokacija studija Zen place Pula" 
-        style={{ width: '100%', height: 'auto' }} 
-      />
+        style={{ width: '100%', height: 'auto' }} />
     </div>
   </div>
 </div>

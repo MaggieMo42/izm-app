@@ -10,12 +10,12 @@ body {
 .navbar {
 	display: flex;
 	background: #84D99C;
-	background: linear-gradient(0deg, rgba(132, 217, 156, 1) 50%, rgba(14, 92, 99, 1) 100%);
+	background: linear-gradient(0deg, rgba(132, 217, 156, 0.7) 50%, rgba(14, 92, 99, 0.7) 100%);
 	color: #fffaf6;
 	}
 	
 .dropdown-menu {
-	background: #84D99C;
+	background: rgba(132, 217, 156, 0.7);
 }
 
 .creamtext {
@@ -31,7 +31,7 @@ body {
 }
 
 .hero-slider img {
-  margin-top: 10px;
+ 
   width: 100%;
   height: auto;
   display: block
@@ -42,8 +42,7 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: rgba(14, 92, 99, 1);
-  border: solid 10px rgba(132, 217, 156, 0.5);
+
 }
 
 .hero-text {
@@ -140,7 +139,7 @@ hr.d-inline-block {
 footer {
 
 	background: #84D99C;
-	background: linear-gradient(0deg, rgba(132, 217, 156, 1) 50%, rgba(14, 92, 99, 1) 100%);
+background: linear-gradient(0deg, rgba(132, 217, 156, 0.7) 50%, rgba(14, 92, 99, 0.7) 100%);
   padding-top: 10px;
 	
 }
@@ -191,7 +190,7 @@ padding-left: 1rem;
 }
 
 .clanak-fotka {
-    border: 5px solid #fffaf6;
+    border: 5px solid rgba(14, 92, 99, 0.5);
 }
 
 .clanak-sadrzaj table {
