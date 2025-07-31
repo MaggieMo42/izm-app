@@ -1,5 +1,4 @@
 import { Link } from 'react-router-dom';
-import NewsletterForm from '../parts/NewsletterForm';
 const Footer = () => {
 
   return (
@@ -41,7 +40,7 @@ const Footer = () => {
           </div> 
         <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
           <div class="ml-embedded" data-form="xfGhA4">test</div>
-            <NewsletterForm />
+    
           </div> 
       </div>
       </div>
