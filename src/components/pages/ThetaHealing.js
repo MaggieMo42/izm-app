@@ -4,29 +4,48 @@ import sanitizeHtml from "sanitize-html";
 
 const ThetaHealing = () => {
 
-    const [data, setData] = useState(null);
-    const [error, setError] = useState(null);
-
-    useEffect(() => {
-        const fetchPage = async () => {
-            try {
-                const response = await fetch('https://wp1.edukacija.online/backend/wp-json/wp/v2/pages/1321?_embed');
-                if (!response.ok) {
-                throw new Error(`Došlo je do greške: ${response.status}`);
-                }
-                const json = await response.json();
-                setData(json);
-            } catch (err) {
-                setError(err.message);
-            }
-        };
-
-        fetchPage();
-    }, []);
-
-    if (error) return <p>Greška: {error}</p>;
-    if (!data) return <p>Učitavanje...</p>;
-
+ const [data, setData] = useState(null);
+     const [error, setError] = useState(null);
+     const [loading, setLoading] = useState(true);
+ 
+     useEffect(() => {
+         const fetchPage = async () => {
+             try {
+                 // Fixed: Removed double slash
+                 const response = await fetch(
+                     'https://zenplacepula.zenplacepula.com/wp-json/wp/v2/pages?slug=theta-healing&_embed'
+                 );
+                 
+                 if (!response.ok) {
+                     throw new Error(`Došlo je do greške: ${response.status}`);
+                 }
+                 
+                 const json = await response.json();
+                 
+                 // Fixed: WordPress returns array, get first element
+                 if (json && json.length > 0) {
+                     setData(json[0]);
+                 } else {
+                     throw new Error("Stranica nije pronađena");
+                 }
+             } catch (err) {
+                 setError(err.message);
+             } finally {
+                 setLoading(false);
+             }
+         };
+         
+         fetchPage();
+     }, []);
+ 
+     // Fixed: Proper loading state
+     if (loading) return <p>Učitavanje...</p>;
+     
+     // Fixed: Proper error state
+     if (error) return <p>Greška: {error}</p>;
+     
+     // Fixed: Check if data exists before rendering
+     if (!data) return <p>Nema podataka</p>;
 
         return(
             <div className="container py-5 clanak-single">

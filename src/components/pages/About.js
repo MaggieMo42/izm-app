@@ -9,7 +9,7 @@ const About = () => {
         const fetchPage = async () => {
             try {
                 const response = await fetch(
-                    'https://zenplacepula.infinityfree.me//wp-json/wp/v2/pages?slug=o-meni&_embed'
+                    'https://zenplacepula.zenplacepula.com/wp-json/wp/v2/pages?slug=o-meni&_embed'
                 );
                 
                 if (!response.ok) {

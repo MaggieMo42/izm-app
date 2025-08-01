@@ -11,7 +11,7 @@ const Novosti = () => {
             try {
   
                 const response = await fetch(
-                    `https://wp1.edukacija.online/backend/wp-json/wp/v2/posts?slug=${id}&author_name=Margarita_Moric&_embed`
+                    `https://zenplacepula.zenplacepula.com/wp-json/wp/v2/posts?slug=${id}&author_name=margarita.miletic@gmail.com&_embed`
                 );
                 
                 if (!response.ok) {

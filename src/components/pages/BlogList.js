@@ -5,13 +5,13 @@ const BlogList = () => {
     const [posts, setPosts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
-    const authorId = 2; 
+    const authorId = 1; 
 
     useEffect(() => {
         const fetchPosts = async () => {
             try {
                 const response = await fetch(
-                    `https://wp1.edukacija.online/backend/wp-json/wp/v2/posts?author=${authorId}&_embed`
+                    `https://zenplacepula.zenplacepula.com/wp-json/wp/v2/posts?author=${authorId}&_embed`
                 );
                 
                 if (!response.ok) {
