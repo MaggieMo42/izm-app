@@ -38,8 +38,8 @@ function MailerLiteForm() {
 
   return (
     <form className="newsletter-form" onSubmit={handleSubmit}>
-      <label htmlFor="email">Pretplatite se naš newsletter</label><br />
-      <input
+      <label htmlFor="email">Pretplatite se naš newsletter</label><br /><br></br>
+      <input className=" px-2"
         type="email"
         id="email"
         name="fields[email]"

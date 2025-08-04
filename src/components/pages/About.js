@@ -36,7 +36,7 @@ const About = () => {
     if (!data) return <p>Učitavanje...</p>;
 
     return (
-        <div className="container py-5 clanak-single">
+        <div className="container py-3 clanak-single">
             <div className="row">
                 <div className="col-md-8 m-auto mb-4 clanak-zaglavlje">
                     <p>{data?._embedded?.["wp:term"]?.[0]?.[0]?.name}</p>

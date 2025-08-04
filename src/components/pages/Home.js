@@ -12,7 +12,7 @@ const Home = () => {
      useEffect(() => {
          const fetchPage = async () => {
              try {
-                 // Fixed: Removed double slash
+               
                  const response = await fetch(
                      'https://zenplacepula.zenplacepula.com/wp-json/wp/v2/pages?slug=pocetna&_embed'
                  );
@@ -23,7 +23,7 @@ const Home = () => {
                  
                  const json = await response.json();
                  
-                 // Fixed: WordPress returns array, get first element
+                 
                  if (json && json.length > 0) {
                      setData(json[0]);
                  } else {
@@ -39,13 +39,13 @@ const Home = () => {
          fetchPage();
      }, []);
  
-     // Fixed: Proper loading state
+    
      if (loading) return <p>Učitavanje...</p>;
      
-     // Fixed: Proper error state
+    
      if (error) return <p>Greška: {error}</p>;
      
-     // Fixed: Check if data exists before rendering
+     
      if (!data) return <p>Nema podataka</p>;
  
 
@@ -67,7 +67,7 @@ const Home = () => {
         }}
       />
     </div>
-    <div className="py-5">
+    <div className="py-3">
         <BlogList />
       </div>
   </>

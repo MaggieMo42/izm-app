@@ -34,7 +34,7 @@ const BlogList = () => {
     if (loading) return <p>Učitavanje...</p>;
 
     return (
-        <div className="container py-5">
+        <div className="container py-3">
             <h1>Nadolazeća događanja</h1>
 <p>Rezervirajte svoje mjesto za neko od nadolazećih događanja. Očekuju vas radionice, tematski tretmani i prilike za osobnim rastom, učenjem i druženjem. Pridruži nam se!</p>
             <div className="row">
@@ -64,9 +64,9 @@ const BlogList = () => {
                                 />
                                 <Link 
                                     to={`/blog/${post.slug}`} 
-                                    className="btn btn-primary"
+                                    className="btn btn-clanak"
                                 >
-                                    Pročitaj više
+                                    Pročitajte više
                                 </Link>
                             </div>
                         </div>

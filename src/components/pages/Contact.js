@@ -20,7 +20,7 @@ const Contact = () => {
       ></iframe>
     </div>
     
-    <div className="col-md-6">
+    <div className="col-md-6 mb-4">
       <img 
         src={Lokacija} 
         alt="Lokacija studija Zen place Pula" 
