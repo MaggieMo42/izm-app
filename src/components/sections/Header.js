@@ -25,9 +25,7 @@ const Header = () => {
                             <Nav.Link as={Link} to="/About" className="creamtext">
                                 O meni
                             </Nav.Link>
-                            <Nav.Link as={Link} to="/Contact" className="creamtext">
-                                Kontakt
-                            </Nav.Link>
+                           
                             <NavDropdown title="Usluge" id="services-dropdown" className="creamtext">
                                 <NavDropdown.Item as={Link} to="/ZvucnaMasaza">Zvučna masaža</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/KundaliniYoga">Kundalini Yoga</NavDropdown.Item>
@@ -35,7 +33,11 @@ const Header = () => {
                                 <NavDropdown.Item as={Link} to="/HumanDesign">Human Design</NavDropdown.Item>
                                 <NavDropdown.Item as={Link} to="/Cjenik">Cjenik</NavDropdown.Item>
                             </NavDropdown>
-                        </Nav>
+                         <Nav.Link as={Link} to="/Contact" className="creamtext">
+                                Kontakt
+                            </Nav.Link>   
+                        </Nav> 
+                        
                     </Navbar.Collapse>
                 </Container>
             </Navbar>

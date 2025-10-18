@@ -1,8 +1,8 @@
-@import url('https://fonts.googleapis.com/css2?family=Rosario:ital,wght@0,300..700;1,300..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Corinthia:wght@400;700&display=swap');
 
 body {
-	font-family: "Rosario", sans-serif;
+	font-family: "Lato", sans-serif;
 	background-color: rgba(242, 233, 210, 1);
 	font-size: 20px;
   color: #484338;
@@ -13,6 +13,7 @@ body {
 	background: #84D99C;
 	background: linear-gradient(0deg, rgba(132, 217, 156, 0.7) 50%, rgba(14, 92, 99, 0.7) 100%);
 	color: #fffaf6;
+  font-family: "Lato", sans-serif;
 	}
 	
 .dropdown-menu {
@@ -64,7 +65,7 @@ body {
 }
 
 .hero-text h1 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -176,10 +177,13 @@ a {
 
 h1 {
   text-align: center;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
   font-family: "Corinthia", cursive;
-font-weight: 700;
-color: #84D99C;
+  font-weight: 700;
+  color: #84D99C;
+  font-size: clamp(2rem, 4vw, 3.5rem); 
+  line-height: 1.2;
+  letter-spacing: 0.03em;
 }
 
 

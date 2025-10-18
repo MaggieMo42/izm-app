@@ -61,13 +61,14 @@ const Cjenik = () => {
                             __html: sanitizeHtml(data.content.rendered, {
                                 allowedTags: [
                                     "p", "strong", "em", "ul", "ol", "li", "h1", "h2", "h3", "br",
-                                    "table", "thead", "tbody", "tr", "th", "td", "caption"
+                                    "table", "thead", "tbody", "tr", "th", "td", "caption", "a"
                                 ],
                                 allowedAttributes: {
                                     img: ["src", "alt", "width", "height", "style"],
                                     table: ["border", "cellpadding", "cellspacing", "width", "style"],
                                     td: ["colspan", "rowspan", "style"],
-                                    th: ["colspan", "rowspan", "style"],
+                                    th: ["colspan", "rowspan", "style"], 
+                                    a: ["href", "target", "rel"],
                                     "*": ["style"]
                                 }
                             })
