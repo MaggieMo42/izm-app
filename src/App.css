@@ -193,11 +193,27 @@ padding-left: 1rem;
 
 .clanak-sadrzaj {
   background-color: rgba(255, 250, 246, 0.5);
+  padding: 2rem;
+      
+    }
+      .clanak-fotka {
+  width: 70%;
+  max-width: 800px;  
+  height: auto;
+  display: block;
+  margin: 0 auto 2rem auto; 
+border: 5px solid rgba(21, 96, 103, 0.5);
+  
 }
 
-.clanak-fotka {
-    border: 5px solid rgba(14, 92, 99, 0.5);
+
+@media (max-width: 768px) {
+  .clanak-fotka {
+    width: 100%;
+    max-width: 100%;
+  }
 }
+
 
 .clanak-sadrzaj table {
     width: 100%;

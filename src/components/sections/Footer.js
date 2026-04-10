@@ -11,9 +11,9 @@ const Footer = () => {
             <h6 className="text-uppercase fw-bold">Usluge</h6>
             <hr className="mb-4 mt-0 d-inline-block mx-auto" />
             <p><Link to="/ZvucnaMasaza" className="text-dark">Zvučna masaža</Link></p>
-            <p><Link to="/KundaliniYoga" className="text-dark">Kundalini yoga</Link></p>
-            <p><Link to="/ThetaHealing" className="text-dark">Theta healing</Link></p>
-            <p><Link to="/HumanDesign" className="text-dark">Human Design</Link></p>
+            <p><Link to="/TherapyYoga" className="text-dark">Therapy Yoga</Link></p>
+            <p><Link to="/ThetaHealing" className="text-dark">Theta Healing</Link></p>
+  
           </div>
           <div className="col-md-4 col-lg-4 col-xl-4 mb-4">
             <h6 className="text-uppercase fw-bold">Kontakt</h6>

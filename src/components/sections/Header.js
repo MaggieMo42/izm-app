@@ -28,9 +28,9 @@ const Header = () => {
                            
                             <NavDropdown title="Usluge" id="services-dropdown" className="creamtext">
                                 <NavDropdown.Item as={Link} to="/ZvucnaMasaza">Zvučna masaža</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/KundaliniYoga">Kundalini Yoga</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/ThetaHealing">Theta healing</NavDropdown.Item>
-                                <NavDropdown.Item as={Link} to="/HumanDesign">Human Design</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/TherapyYoga">Therapy Yoga</NavDropdown.Item>
+                                <NavDropdown.Item as={Link} to="/ThetaHealing">Theta Healing</NavDropdown.Item>
+
                                 <NavDropdown.Item as={Link} to="/Cjenik">Cjenik</NavDropdown.Item>
                             </NavDropdown>
                          <Nav.Link as={Link} to="/Contact" className="creamtext">

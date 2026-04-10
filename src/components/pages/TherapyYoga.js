@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import sanitizeHtml from "sanitize-html";
 
-const KundaliniYoga = () => {
+const TherapyYoga = () => {
     const [data, setData] = useState(null);
     const [error, setError] = useState(null);
     const [loading, setLoading] = useState(true);
@@ -9,9 +9,9 @@ const KundaliniYoga = () => {
     useEffect(() => {
         const fetchPage = async () => {
             try {
-                // Fixed: Removed double slash
+              
                 const response = await fetch(
-                    'https://zenplacepula.zenplacepula.com/wp-json/wp/v2/pages?slug=kundalini-yoga&_embed'
+                    'https://zenplacepula.zenplacepula.com/wp-json/wp/v2/pages?slug=therapy-yoga&_embed'
                 );
                 
                 if (!response.ok) {
@@ -20,7 +20,7 @@ const KundaliniYoga = () => {
                 
                 const json = await response.json();
                 
-                // Fixed: WordPress returns array, get first element
+             
                 if (json && json.length > 0) {
                     setData(json[0]);
                 } else {
@@ -36,13 +36,12 @@ const KundaliniYoga = () => {
         fetchPage();
     }, []);
 
-    // Fixed: Proper loading state
     if (loading) return <p>Učitavanje...</p>;
     
-    // Fixed: Proper error state
+
     if (error) return <p>Greška: {error}</p>;
     
-    // Fixed: Check if data exists before rendering
+    
     if (!data) return <p>Nema podataka</p>;
 
         return(
@@ -53,7 +52,7 @@ const KundaliniYoga = () => {
                         <h1>{data.title.rendered}</h1>
                     </div>
                     <div className="col-md-9 m-auto">
-                        <img className="w-100 mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url}alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"} />
+                        <img className="mb-5 clanak-fotka" src={data?._embedded?.["wp:featuredmedia"]?.[0]?.media_details?.sizes?.medium_large?.source_url}alt={data._embedded["wp:featuredmedia"][0].alt_text || "Default description"} />
                     </div>
                     <div className="col-md-10 m-auto clanak-sadrzaj">
                         <div
@@ -72,4 +71,4 @@ const KundaliniYoga = () => {
             </div>
         );
 };
-export default KundaliniYoga;
+export default TherapyYoga;
